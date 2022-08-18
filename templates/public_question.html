@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}開啟新話題{% endblock %}
+
+{% block body %}
+<div class="row" style="margin-top: 20px;">
+<div class="col"></div>
+<div class="col-8">
+  <h1 style="text-align: center;">開啟話題</h1>
+  <form action="{{ url_for('qa.public_question') }}" method="post">
+    <div class="form-group">
+      <input type="text" name="title" class="form-control" placeholder="請輸入標題">
+    </div>
+    <div class="form-group">
+      <textarea name="content" class="form-control" rows="10" placeholder="請輸入内容"></textarea>
+    </div>
+
+    {% for message in get_flashed_messages() %}
+      <div class="form-group">
+        <div class="text-danger">{{ message }}</div>
+      </div>
+    {% endfor %}
+
+    <div class="form-group" style="text-align: right;">
+      <button class="btn btn-primary">送出</button>
+    </div>
+  </form>
+</div>
+<div class="col"></div>
+</div>
+{% endblock %}

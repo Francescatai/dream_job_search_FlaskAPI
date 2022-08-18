@@ -1,0 +1,245 @@
+{% extends "base.html" %}
+
+{% block title %}專題介紹{% endblock %}
+
+{% block head %}
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+<!-- Vendor CSS Files -->
+<link rel="stylesheet" href="{{ url_for('static',filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static',filename='assets/vendor/icofont/icofont.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static',filename='assets/vendor/boxicons/css/boxicons.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static',filename='assets/vendor/animate.css/animate.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static',filename='assets/vendor/venobox/venobox.css') }}">
+<link rel="stylesheet" href="{{ url_for('static',filename='assets/vendor/aos/aos.css') }}">
+
+  <!-- Template Main CSS File -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/style.css') }}">
+
+
+
+
+{% endblock %}
+
+{% block body %}
+  <!-- ======= Our Team Section ======= -->
+  <section id="team" class="team">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>DV102-大數據職缺分析</h2>
+      </div>
+
+      <!-- ======= Counts Section ======= -->
+  <section class="counts section-bg">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up">
+            <a href="/user">
+          <div class="count-box">
+            <i class="icofont-dashboard-web" style="color: #BB6464;"></i>
+            <span data-toggle="counter-up">5</span>
+            <p>總計圖表</p>
+          </div>
+            </a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="200">
+            <a href="/user">
+          <div class="count-box">
+            <i class="icofont-document-folder" style="color: #583f64;"></i>
+            <span data-toggle="counter-up">5</span>
+            <p>總計數據源</p>
+          </div>
+            </a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="400">
+           <a href="/user">
+              <div class="count-box">
+               <i class="icofont-search-job" style="color: #3f7385;"></i>
+              <span data-toggle="counter-up">19793</span>
+               <p>總計職缺數據</p>
+              </div>
+           </a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="600">
+          <a href="/user">
+          <div class="count-box">
+            <i class="icofont-users-alt-2" style="color: #ffb459;"></i>
+            <span data-toggle="counter-up">4</span>
+            <p>團隊成員</p>
+          </div>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Counts Section -->
+       <!-- ======= Our Team Section ======= -->
+       <section id="team" class="team">
+        <div class="container">
+
+          <div class="section-title">
+                    <h2>主題介紹</h2>
+                <img src="{{ url_for('static',filename='assets/img/team/ppt2.jpg') }}" width="1000" height="600"  style="display:block; margin:auto;" data-aos="fade-up">
+              <br>
+              <img src="{{ url_for('static',filename='assets/img/team/ppt3.jpg') }}" width="1000" height="600"  style="display:block; margin:auto;"data-aos="fade-up">
+              <br>
+              <img src="{{ url_for('static',filename='assets/img/team/ppt5.jpg') }}" width="1000" height="600"  style="display:block; margin:auto;"data-aos="fade-up">
+              <br>
+              <img src="{{ url_for('static',filename='assets/img/team/ppt4.jpg') }}" width="1000" height="600"  style="display:block; margin:auto;"data-aos="fade-up">
+          </div>
+          <br></br>
+<br></br>
+<br></br>
+          <div class="section-title">
+            <h2>任務分工</h2>
+            <p>我們都完成了哪些事情</p>
+          </div>
+  
+          <div class="row">
+  
+            <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
+              <div class="member">
+                <div class="pic"><img src="{{ url_for('static',filename='assets/img/team/68808.jpg') }}" class="img-fluid" alt=""></div>
+
+                <div class="member-info">
+                    <h4>Una</h4>
+                  <h6>資料工程師</h6>
+                  <span>爬蟲及ETL</span>
+                  <span>語意分析</span>
+                    <span>爬蟲機及資料庫架設(AWS)</span>
+                  <div class="social">
+                    <a href=""><i class="icofont-facebook"></i></a>
+                    <a href=""><i class="icofont-instagram"></i></a>
+                    <a href=""><i class="icofont-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="member">
+                <div class="pic"><img src="{{ url_for('static',filename='assets/img/team/68807.jpg') }}" class="img-fluid" alt=""></div>
+                <div>
+
+
+                </div>
+                <div class="member-info">
+                  <h4>Christine</h4>
+                  <h6>UX設計師</h6>
+                  <span>爬蟲</span>
+                    <span>使用者體驗策劃</span>
+                  <span>視覺化圖表(TABLEAU)</span>
+                  <div class="social">
+              
+                    <a href=""><i class="icofont-facebook"></i></a>
+                    <a href=""><i class="icofont-instagram"></i></a>
+                    <a href=""><i class="icofont-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="member">
+                <div class="pic"><img src="{{ url_for('static',filename='assets/img/team/68809.jpg') }}" class="img-fluid" alt=""></div>
+                <div class="member-info">
+                 <h4>TzuChing</h4>
+                  <h6>數據視覺化工程師</h6>
+                  <span>爬蟲</span>
+                  <span>視覺化圖表(TABLEAU)</span>
+                    <span>使用者體驗策劃</span>
+                  <div class="social">
+                    <a href=""><i class="icofont-facebook"></i></a>
+                    <a href=""><i class="icofont-instagram"></i></a>
+                    <a href=""><i class="icofont-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="member">
+                <div class="pic"><img src="{{ url_for('static',filename='assets/img/team/68806.jpg') }}" class="img-fluid" alt=""></div>
+                <div class="member-info">
+                  <h4>Evelyn</h4>
+                    <h6>API工程師</h6>
+                  <span>爬蟲及ETL</span>
+                  <span>API建置</span>
+                    <span>專案管理</span>
+                  <div class="social">
+
+                    <a href=""><i class="icofont-facebook"></i></a>
+                    <a href=""><i class="icofont-instagram"></i></a>
+                    <a href=""><i class="icofont-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section>
+    </div>
+  </section>
+
+      <br></br>
+<br></br>
+<br></br>
+<div class="section-title">
+            <h2>工作時程</h2>
+    <br>
+    <img src="{{ url_for('static',filename='assets/img/team/ppt6.png') }}" width="1000" height="600"  style="display:block; margin:auto;" data-aos="fade-up">
+              <br>
+            <p>點擊下方圖片查看完整規劃</p>
+          </div>
+<a href="https://abrasive-gruyere-e46.notion.site/3867733de30a4e1ba48e036df4cf53f4?v=d5ace3e361ef4ad3b3d3845e9aaec158"><img src="{{ url_for('static',filename='assets/img/team/gantt chart.png') }}" width="1000" height="700"  style="display:block; margin:auto;" data-aos="fade-up"></a>
+</div>
+<br></br>
+<br></br>
+<br></br>
+<div class="section-title">
+            <h2>資料源蒐集與規劃</h2>
+   <br>
+    <img src="{{ url_for('static',filename='assets/img/team/ppt7.png') }}" width="1000" height="600"  style="display:block; margin:auto;" data-aos="fade-up">
+              <br>
+          </div>
+<br></br>
+<br></br>
+<br></br>
+<div class="section-title">
+            <h2>困難與解決方式</h2>
+ <br>
+    <img src="{{ url_for('static',filename='assets/img/team/ppt8.png') }}" width="1000" height="600"  style="display:block; margin:auto;" data-aos="fade-up">
+              <br>
+
+     <img src="{{ url_for('static',filename='assets/img/team/ppt13.png') }}" width="1000" height="600"  style="display:block; margin:auto;" data-aos="fade-up">
+    <br>
+    <img src="{{ url_for('static',filename='assets/img/team/ppt9.png') }}" width="1000" height="600"  style="display:block; margin:auto;" data-aos="fade-up">
+              <br>
+     <img src="{{ url_for('static',filename='assets/img/team/ppt10.png') }}" width="1000" height="600"  style="display:block; margin:auto;" data-aos="fade-up">
+              <br>
+    <img src="{{ url_for('static',filename='assets/img/team/ppt11.png') }}" width="1000" height="600"  style="display:block; margin:auto;" data-aos="fade-up">
+              <br>
+     <img src="{{ url_for('static',filename='assets/img/team/ppt12.png') }}" width="1000" height="600"  style="display:block; margin:auto;" data-aos="fade-up">
+              <br>
+          </div>
+
+
+
+
+
+{% endblock %}

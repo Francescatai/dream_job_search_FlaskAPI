@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Resizing</title>
+
+    <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    <div class='tableauPlaceholder' id='viz1654249978011' style='position: relative'><noscript><a href='#'><img alt='儀表板窗格 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;te&#47;testboard&#47;1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='testboard&#47;1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;te&#47;testboard&#47;1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='zh-TW' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1654249978011');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    <script type="text/javascript">
+        var viz;
+
+        function initViz() {
+            var containerDiv = document.getElementById("vizContainer"),
+                url = "http://public.tableau.com/views/RegionalSampleWorkbook/Stocks",
+                options = {
+                    hideTabs: true
+                };
+
+            viz = new tableau.Viz(containerDiv, url, options);
+        }
+
+        function vizResize() {
+            var width = document.getElementById("resizeWidth").value;
+            var height = document.getElementById("resizeHeight").value;
+
+            viz.setFrameSize(parseInt(width, 10), parseInt(height, 10));
+        }
+
+        /* Important: Worksheets automatically resize to fill the div container for
+         * the visualization. However, dashboards and stories do not resize automatically
+         * unless you create them with the automatic size option in Tableau Desktop.
+         * Scroll down to see how to change the size of a visualization that contains
+         * a dashboard or story.
+         *
+         * To change the size of a visualization that contains a dashboard or story,
+         * use the following function instead:
+         *
+         * function vizResize() {
+         *     var width = document.getElementById("resizeWidth").value;
+         *     var height = document.getElementById("resizeHeight").value;
+         *     var sheet = viz.getWorkbook().getActiveSheet();
+         *
+         *     sheet.changeSizeAsync(
+         *         {"behavior": "EXACTLY", "maxSize": { "height": height, "width": width }})
+         *         .then(viz.setFrameSize(parseInt(width, 10), parseInt(height, 10)));
+         * }
+        */
+
+    </script>
+</head>
+
+<body onload="initViz();">
+    <div id="vizContainer" style="width:800px; height:700px; overflow:auto;"></div>
+    <div id="controls" style="padding:20px;">
+        <form id="resizeForm">
+            <input type="text" id="resizeWidth" placeholder="Width">
+            <input type="text" id="resizeHeight" placeholder="Height">
+            <button type="button" onClick="vizResize();">Resize</button>
+        </form>
+    </div>
+</body>
+
+</html>
