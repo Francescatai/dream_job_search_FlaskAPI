@@ -3,6 +3,8 @@
 ### Introduction
  提供求職者用於了解及尋找大數據相關職缺的Web API
 ![](https://i.imgur.com/HaflotT.png)
+![](https://i.imgur.com/Frw8RrE.png)
+
 ### Tech Stack &Tools
 
 
@@ -21,5 +23,6 @@
 #### 討論專區
 ![](https://i.imgur.com/HBRSj9S.png)
 
-
+### Team
+![](https://i.imgur.com/RTEadeW.png)
 
